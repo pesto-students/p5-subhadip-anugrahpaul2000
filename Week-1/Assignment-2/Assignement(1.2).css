@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+}
+.container-fluid {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  display: flex;
+  height: 100%;
+}
+
+.sideNav {
+  width: 3%;
+  background-color: rgb(197, 197, 197);
+  float: left;
+}
+.sideNav ul {
+  list-style: none;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-top: 30%;
+  padding-bottom: 0%;
+}
+.sideNav ul li {
+  padding-top: 100%;
+  padding-bottom: 100%;
+}
+.sideNav ul li i {
+  font-size: 22;
+}
+
+.content {
+  float: right;
+  flex-grow: 1;
+}
+
+.header {
+  display: flex;
+  background-color: rgb(49, 49, 49);
+}
+#imgContainer {
+  float: left;
+  padding: 2%;
+}
+#imgContainer img {
+  height: 200px;
+  width: 200px;
+}
+#detailContainer {
+  padding: 1%;
+  color: white;
+  float: right;
+}
+#detailContainer p i {
+  padding: 2%;
+}
+
+.mainBody table tr:nth-child(even) {
+  background-color: rgb(197, 197, 197);
+  border-spacing: 0;
+}
+.mainBody {
+  padding: 2%;
+}
+.mainBody table {
+  width: 100%;
+  border-spacing: 0;
+}
+.mainBody table tr td {
+  padding: 1%;
+}
+.mainBody table tr td a{
+  color: blue;
+}
+
+.footer {
+  background-color: rgb(96, 98, 231);
+  height: 10%;
+  padding: 1% 1%;
+  color: white;
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+}
+.player{ 
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+}
+.playImg {
+  float: left;
+}
+.playImg img {
+  height: 100%;
+  width: 100%;
+}
+.trackDetails {
+  float: right; 
+  padding: 10px; 
+  margin-left: 10px;
+}
+.trackDetails span {
+  font-size: smaller;
+  padding: 8px;
+  margin: 0;
+}
+.playbackControl {
+  float: right;
+  padding: 1%;
+  width: 60%;
+}
+.playbackControl ul{
+  list-style: none;
+  margin: 0;
+}
+.playbackControl ul li{
+  float: right;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 30;
+}ṭ
