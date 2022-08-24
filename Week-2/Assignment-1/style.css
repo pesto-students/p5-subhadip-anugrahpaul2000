@@ -1,76 +1,129 @@
 * {
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  .containerFluid {
-    padding: 10px;
-    border: 1px solid green;
-  }
-  
-  .mainBody {
-    border: 1px solid red;
-    padding: 10px;
-  }
-  
-  #heading {
-    border: 1px solid yellow;
-    padding: 10px;
-    margin: 5px;
+  margin: 0px;
+  padding: 0px;
+}
+.containerFluid {
+  padding: 10px;
+}
+
+.fontExtraSmall {
+  font-size: 14px;
+}
+.fontMedium {
+  font-size: 18px;
+}
+
+.mainBody {
+  padding: 10px;
+}
+
+#heading {
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+#heading h1 {
+  padding: 2px;
+}
+
+#content > div {
+  margin: 10px;
+  padding: 10px;
+}
+
+.articleHeader {
+  padding: 5px;
+}
+.articleHeader h2 {
+  padding: 5px;
+}
+.articleHeader span {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.articleSummary {
+  padding: 5px;
+}
+.articleSummary p {
+  text-align: justify;
+  padding: 5px;
+}
+.articleSummary span {
+  display: flex;
+  justify-content: end;
+}
+.articleSummary span a {
+  padding: 10px;
+  border-radius: 25px;
+  color: #ffffff;
+  background-color: #5656ff;
+  text-decoration: none;
+}
+
+.formField {
+  margin: 10px 5px;
+  padding: 5px;
+  border: 1px solid black;
+
+}
+.formField button{
+  background-color: lightskyblue;
+  border-radius: 25px;
+  margin: 30px;
+  padding: 12px 20px;
+}
+.formField form{
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.formLabels {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto;
+  border: 1px solid black;
+
+}
+.formInputFields {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto;
+  border: 1px solid black;
+}
+
+.formLabels label {
+  margin: 8px;
+  padding: 10px 20px;
+  border: 1px solid black;
+}
+
+.formInputFields input, select {
+  margin: 5px;
+  padding: 0px 20px;
+  /* border: none; */
+  border: 1px solid black;
+
+}
+
+@media only screen and (min-width: 1280px) {
+  #content {
     display: grid;
-    place-items: center;
+    grid-template-columns: auto auto auto;
   }
-  
-  #heading h1 {
-    padding: 2px;
-    font-size: 26px;
+}
+
+@media only screen and (max-width: 1280px) {
+  #content {
+    display: grid;
+    grid-template-columns: auto auto;
   }
-  
-  #content > div {
-    margin: 10px;
-    padding: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  #content {
+    display: grid;
+    grid-template-columns: auto;
   }
-  
-  .articleHeader {
-    padding: 2px;
-  }
-  .articleHeader h2 {
-    font-size: 18px;
-  }
-  .articleHeader span {
-    font-size: 12px;
-  }
-  
-  .articleSummary {
-    padding: 5px;
-  }
-  .articleSummary p {
-    text-align: justify;
-    padding: 2px;
-    font-size: 14px;
-  }
-  .articleSummary a {
-    font-size: 14px;
-    padding: 2px;
-  }
-  
-  @media only screen and (min-width: 1280px) {
-    #content {
-      display: grid;
-      grid-template-columns: auto auto auto;
-    }
-  }
-  
-  @media only screen and (max-width: 1280px) {
-    #content {
-      display: grid;
-      grid-template-columns: auto auto;
-    }
-  }
-  
-  @media only screen and (max-width: 480px) {
-    #content {
-      display: grid;
-      grid-template-columns: auto;
-    }
-  }
+}
