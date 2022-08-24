@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  padding: 50px 50px;
+  display: flex;
+  justify-content: center;
+}
+#main {
+  column-gap: 200px;
+  height: 400px;
+  width: 400px;
+  grid-template-columns: 0 0;
+  display: grid;
+}
+
+.square {
+  height: 200px;
+  width: 200px;
+}
+
+#content {
+  margin: 100px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+}
+
+.transition {
+  transition: rotate 2s;
+}
+
+.bgRed {
+  background-color: #ff0000;
+}
+.bgBlue {
+  background-color: #0000ff;
+}
+.bgGreen {
+  background-color: #008000;
+}
+.bgYellow {
+  background-color: #ffff00;
+}
+
+.rotateOriginal {
+  rotate: 0deg;
+}
+
+.tranformTopLeft{
+  transform-origin: top left;
+}
+.tranformTopRight{
+  transform-origin: top right;
+}
+.tranformBottomLeft{
+  transform-origin: bottom left;
+}
+.tranformBottomRight{
+  transform-origin: bottom right;
+}
+
+#main:hover #topLeft {
+  rotate: 90deg;
+}
+#main:hover #bottomLeft {
+  rotate: -90deg;
+}
+#main:hover #topRight {
+  rotate: -90deg;
+}
+#main:hover #bottomRight {
+  rotate: 90deg;
+}

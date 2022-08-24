@@ -15,6 +15,7 @@ Create a new webpage on a subject that you're interested in. The page should **N
 * Use the sketch below to guide you towards the layout and content you are trying to achieve.
 * Please note that this is just a sketch - you can choose the colors, fonts, images, input fields,validation messages etc. that you want to use in the page.
 
+![](Reference.png)
 ## Guidelines:  
 
 1. There should be a separate branch created in GitHub for this exercise.
