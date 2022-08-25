@@ -66,45 +66,48 @@
 .formField {
   margin: 10px 5px;
   padding: 5px;
-  border: 1px solid black;
-
-}
-.formField button{
-  background-color: lightskyblue;
-  border-radius: 25px;
-  margin: 30px;
-  padding: 12px 20px;
-}
-.formField form{
-  display: grid;
-  grid-template-columns: 20% 80%;
-}
-.formLabels {
-  padding: 10px;
-  display: grid;
-  grid-template-columns: auto;
-  border: 1px solid black;
-
-}
-.formInputFields {
-  padding: 10px;
-  display: grid;
-  grid-template-columns: auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
-.formLabels label {
-  margin: 8px;
-  padding: 10px 20px;
-  border: 1px solid black;
+.floatInputGroup {
+  position: relative;
+  margin: 20px;
+  display: flex;
 }
-
-.formInputFields input, select {
-  margin: 5px;
-  padding: 0px 20px;
-  /* border: none; */
-  border: 1px solid black;
-
+.floatingLabel {
+  position: absolute;
+  padding: 10px 10px;
+  margin: 10px;
+  transition: 0.5s ease all;
+}
+.floatingInput:focus ~ .floatingLabel,
+.floatingInput:not(:placeholder-shown) ~ .floatingLabel {
+  margin-top: -2px;
+  font-size: 16px;
+}
+.floatingInput {
+  padding: 30px 20px 10px;
+  width: 40%;
+  border-radius: 5px;
+  border: 1px solid;
+  outline: none;
+}
+.floatingSelect {
+  padding: 30px 20px 10px;
+  width: 40%;
+  border-radius: 5px;
+  border: 1px solid;
+  outline: none;
+}
+.floatingSelect:focus ~ .floatingLabel,
+.floatingSelect:not([value=""]):valid ~ .floatingLabel {
+  margin-top: -2px;
+  font-size: 16px;
+}
+.floatingLabel a {
+  text-decoration: underline;
+  margin: 0px;
+  padding: 0px;
 }
 
 @media only screen and (min-width: 1280px) {
@@ -127,3 +130,5 @@
     grid-template-columns: auto;
   }
 }
+
+/* https://codepen.io/dannibla/pen/amgRNR */

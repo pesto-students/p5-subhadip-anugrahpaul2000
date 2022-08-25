@@ -154,33 +154,56 @@ You have to ask yourself, "What is the goal?" Why do you want to criticize bad i
               </span>
             </div>
           </div>
-
+          
         </div>
       </div>
-
+      
       <div class="formField">
-       <form>
+        
+        <form>
 
-        <div class="formLabels">
-          <label class="fontMedium" for="firstName">First Name</label>
-          <label class="fontMedium" for="lastName">Last Name</label>
-          <label class="fontMedium" for="email">Email</label>
-          <label class="fontMedium" for="phoneNumber">Phone Number</label>
-          <label class="fontMedium" for="password">Password</label>
-          <label class="fontMedium" for="confirmPassword">Confirm Password</label>
-          <label class="fontMedium" for="country">Country</label>
-          <label class="fontMedium" for="termsAgree">I agree to the <a href="https://www.random.org/terms/2020-08-01" target="_blank">terms and conditions</a></label>
+          <div class="floatInputGroup">
+            <input type="radio" id="title">
+            <label class="fontMedium floatingLabel" for="title">Mr.</label>
+            <input type="radio" id="title">
+            <label class="fontMedium floatingLabel" for="title">Ms.</label>
+            <input type="radio" id="title">
+            <label class="fontMedium floatingLabel" for="title">Mrs.</label>
+          </div>
+
+        <div class="floatInputGroup">
+          <input type="text" class="fontMedium floatingInput" id="firstName" placeholder=" " required/>
+          <label class="fontMedium floatingLabel" for="firstName">First Name</label>
         </div>
 
-        <div class="formInputFields">
-          <input type="text" class="fontMedium" id="firstName" placeholder="First Name" required/>
-          <input type="text" class="fontMedium" id="lastName" placeholder="Last Name" required/>
-          <input type="email" class="fontMedium" id="firstName" placeholder="123@example.com" required/>
-          <input type="text" class="fontMedium" id="phoneNumber" placeholder="Phone Number" pattern="[1-9]{1}[0-9]{9}" required/>
-          <input type="password" class="fontMedium" id="password" placeholder="Password" required/>
-          <input type="password" class="fontMedium" id="confirmPassword" placeholder="Confirm Password" required/>
-          <select id="country" class="fontMedium">
-            <option disabled="true" selected>Choose...</option>
+        <div class="floatInputGroup">
+          <input type="text" class="fontMedium floatingInput" id="lastName" placeholder=" " required/>
+          <label class="fontMedium floatingLabel" for="lastName">Last Name</label>
+        </div>
+
+        <div class="floatInputGroup">
+          <input type="email" class="fontMedium floatingInput" id="firstName" placeholder=" " required/>
+          <label class="fontMedium floatingLabel" for="email">Email</label>
+        </div>
+
+        <div class="floatInputGroup">
+          <input type="text" class="fontMedium floatingInput" id="phoneNumber" placeholder=" " pattern="[1-9]{1}[0-9]{9}" required/>
+          <label class="fontMedium floatingLabel" for="phoneNumber">Phone Number</label>
+        </div>
+
+        <div class="floatInputGroup">
+          <input type="password" class="fontMedium floatingInput" id="password" placeholder=" " required/>
+          <label class="fontMedium floatingLabel" for="password">Password</label>
+        </div>
+
+        <div class="floatInputGroup">
+          <input type="password" class="fontMedium floatingInput" id="confirmPassword" placeholder=" " required/>
+          <label class="fontMedium floatingLabel" for="confirmPassword">Confirm Password</label>
+        </div>
+
+        <div class="floatInputGroup">
+          <select id="country" class="fontMedium floatingSelect" onclick="this.setAttribute('value', this.value);">
+            <option value="" selected disabled="true"></option>
             <option value="India">India</option>
             <option value="Russia">Russia</option>
             <option value="China">China</option>
@@ -192,11 +215,20 @@ You have to ask yourself, "What is the goal?" Why do you want to criticize bad i
             <option value="Canada">Canada</option>
             <option value="Australia">Australia</option>
           </select>
-          <input type="checkbox" id="termsAgree" class="fontMedium" required>
+          <label class="fontMedium floatingLabel" for="country">Country</label>
         </div>
-      
-        <button id="submit" class="submitButton">Submit</button>
+
+        <div class="floatInputGroup">
+          <input type="checkbox" id="termsAgree" placeholder=" " class="fontMedium floatingInput" required/>
+          <label for="termsAgree" class="fontMedium floatingLabel">I agree to the <a href="https://www.random.org/terms/2020-08-01" target="_blank">terms and conditions</a></label>
+        </div>
+        
+        <div class="floatInputGroup">
+          <button id="submit" class="submitButton ">Submit</button>
+        </div>
+
       </form>
+
       </div>
     </div>
   </body>
