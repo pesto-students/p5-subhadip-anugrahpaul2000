@@ -56,23 +56,29 @@
   justify-content: end;
 }
 .articleSummary span a {
-  padding: 10px;
-  border-radius: 25px;
-  color: #ffffff;
-  background-color: #5656ff;
   text-decoration: none;
 }
 
+.footer {
+  padding: 20px;
+  background-color: #faebd7;
+  display: flex;
+  justify-content: center;
+}
+
 .formField {
+  width: 40%;
+  border-radius: 10px;
+  background-color: #fcf6ee;
   margin: 10px 5px;
   padding: 5px;
-  /* border: 1px solid black; */
 }
 
 .floatInputGroup {
-  position: relative;
-  margin: 20px;
   display: flex;
+  margin: 10px;
+  padding: 10px;
+  justify-content: center;
 }
 .floatingLabel {
   position: absolute;
@@ -87,7 +93,6 @@
 }
 .floatingInput {
   padding: 30px 20px 10px;
-  width: 40%;
   border-radius: 5px;
   border: 1px solid;
   outline: none;
@@ -99,15 +104,58 @@
   border: 1px solid;
   outline: none;
 }
-.floatingSelect:focus ~ .floatingLabel,
-.floatingSelect:not([value=""]):valid ~ .floatingLabel {
-  margin-top: -2px;
-  font-size: 16px;
-}
 .floatingLabel a {
   text-decoration: underline;
   margin: 0px;
   padding: 0px;
+}
+.floatingInlineInputGroup {
+  padding: 3px 25px;
+  margin: 5px 20px;
+  display: flex;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1.5em auto;
+  gap: 0.5em;
+}
+.floatingInlineInput {
+  padding: 4px;
+}
+.floatingInlineLabel {
+  padding: 2px;
+}
+.floatingInlineLabel span a {
+  text-decoration: underline;
+}
+.floatSubmitButton {
+  padding: 3px 25px;
+  display: flex;
+  justify-content: center;
+  width: 38%;
+}
+
+.button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+  font-family: sans-serif;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button:hover {
+  color: #e8e6e3;
+  background-color: #0062cc;
+  border-color: #0056b3;
+}
+
+.submit {
+  padding: 10px;
+  display: inline-block;
 }
 
 @media only screen and (min-width: 1280px) {
