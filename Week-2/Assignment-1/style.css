@@ -2,10 +2,6 @@
   margin: 0px;
   padding: 0px;
 }
-.containerFluid {
-  padding: 10px;
-}
-
 .fontExtraSmall {
   font-size: 14px;
 }
@@ -99,7 +95,6 @@
 }
 .floatingSelect {
   padding: 30px 20px 10px;
-  width: 40%;
   border-radius: 5px;
   border: 1px solid;
   outline: none;
@@ -110,12 +105,10 @@
   padding: 0px;
 }
 .floatingInlineInputGroup {
-  padding: 3px 25px;
-  margin: 5px 20px;
+  margin: 0px 5px;
   display: flex;
+  justify-content: center;
   border-radius: 5px;
-  display: grid;
-  grid-template-columns: 1.5em auto;
   gap: 0.5em;
 }
 .floatingInlineInput {
@@ -178,5 +171,3 @@
     grid-template-columns: auto;
   }
 }
-
-/* https://codepen.io/dannibla/pen/amgRNR */
