@@ -106,8 +106,8 @@
 }
 .floatingInlineInputGroup {
   margin: 0px 5px;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1em auto;
   border-radius: 5px;
   gap: 0.5em;
 }
