@@ -59,22 +59,21 @@
   padding: 20px;
   background-color: #faebd7;
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 .formField {
-  width: 40%;
   border-radius: 10px;
   background-color: #fcf6ee;
   margin: 10px 5px;
-  padding: 5px;
+  padding: 20px;
 }
 
 .floatInputGroup {
   display: flex;
   margin: 10px;
   padding: 10px;
-  justify-content: center;
+  justify-content: left;
 }
 .floatingLabel {
   position: absolute;
@@ -120,18 +119,12 @@
 .floatingInlineLabel span a {
   text-decoration: underline;
 }
-.floatSubmitButton {
-  padding: 3px 25px;
-  display: flex;
-  justify-content: center;
-  width: 38%;
-}
 
 .button {
-  padding: 10px;
+  margin: 5px;
+  padding: 10px;  
   border-radius: 5px;
   border: none;
-  margin: 5px;
   font-family: sans-serif;
   color: #fff;
   background-color: #007bff;
@@ -146,9 +139,8 @@
   border-color: #0056b3;
 }
 
-.submit {
-  padding: 10px;
-  display: inline-block;
+#submit {
+  padding: 15px 100px;
 }
 
 @media only screen and (min-width: 1280px) {

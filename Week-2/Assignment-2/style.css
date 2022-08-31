@@ -64,12 +64,12 @@
 #main:hover .tranformTopLeft {
   rotate: 90deg;
 }
-#main:hover #bottomLeft {
+#main:hover .tranformBottomLeft {
   rotate: -90deg;
 }
-#main:hover #topRight {
+#main:hover .tranformTopRight {
   rotate: -90deg;
 }
-#main:hover #bottomRight {
+#main:hover .tranformBottomRight {
   rotate: 90deg;
 }
