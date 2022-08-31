@@ -5,7 +5,7 @@
  * @returns cached Output of Function
  */
 function memoize(func) {
-  const cache = new Object();
+  const cache = {};
   return function (...args) {
     const key = args.toString();
     if ("undefined" !== typeof cache[key]) {
