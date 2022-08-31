@@ -70,15 +70,10 @@ function time(fn) {
 
 /** Fibbonaci */
 const memoizeFibbo = memoize(fibbo);
-time(() => memoizeFibbo(10));
-time(() => memoizeFibbo(10));
-time(() => memoizeFibbo(18));
-time(() => memoizeFibbo(13));
-time(() => memoizeFibbo(23));
-time(() => memoizeFibbo(32));
-time(() => memoizeFibbo(23));
-time(() => memoizeFibbo(40));
-time(() => memoizeFibbo(30));
+time(() => memoizeFibbo(45));
+time(() => memoizeFibbo(42));
+time(() => memoizeFibbo(45));
+time(() => memoizeFibbo(42));
 
 /** Addition */
 const memoizeAdd = memoize(add);
