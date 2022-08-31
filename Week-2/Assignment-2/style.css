@@ -61,7 +61,7 @@
   transform-origin: bottom right;
 }
 
-#main:hover #topLeft {
+#main:hover .tranformTopLeft {
   rotate: 90deg;
 }
 #main:hover #bottomLeft {
