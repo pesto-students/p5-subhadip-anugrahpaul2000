@@ -4,7 +4,7 @@ function createIncrement() {
   function increment() {
     count++;
   }
-
+  
   let message = `Count is ${count}`;
   
   function log() {

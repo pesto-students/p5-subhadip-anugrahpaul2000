@@ -68,6 +68,8 @@ function time(fn) {
   console.timeEnd();
 }
 
+console.log("\n================================\n")
+console.log("Fibbonaci");
 /** Fibbonaci */
 const memoizeFibbo = memoize(fibbo);
 time(() => memoizeFibbo(45));
@@ -75,6 +77,8 @@ time(() => memoizeFibbo(42));
 time(() => memoizeFibbo(45));
 time(() => memoizeFibbo(42));
 
+console.log("\n================================\n")
+console.log("Addition");
 /** Addition */
 const memoizeAdd = memoize(add);
 time(() => memoizeAdd(8498156156156,1151561456156126));
@@ -84,6 +88,8 @@ time(() => memoizeAdd(100,200));
 time(() => memoizeAdd(8498156156156,1151561456156126));
 time(() => memoizeAdd(100,100));
 
+console.log("\n================================\n")
+console.log("Multiplication");
 /** Multiplication */
 const memoizeMultiply = memoize(multiply);
 time(() => memoizeMultiply(9999999999999,9999999999999));
