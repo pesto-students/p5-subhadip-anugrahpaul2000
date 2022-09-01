@@ -1,0 +1,165 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.fontExtraSmall {
+  font-size: 14px;
+}
+.fontMedium {
+  font-size: 18px;
+}
+
+.mainBody {
+  padding: 10px;
+}
+
+#heading {
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+#heading h1 {
+  padding: 2px;
+}
+
+#content > div {
+  margin: 10px;
+  padding: 10px;
+}
+
+.articleHeader {
+  padding: 5px;
+}
+.articleHeader h2 {
+  padding: 5px;
+}
+.articleHeader span {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.articleSummary {
+  padding: 5px;
+}
+.articleSummary p {
+  text-align: justify;
+  padding: 5px;
+}
+.articleSummary span {
+  display: flex;
+  justify-content: end;
+}
+.articleSummary span a {
+  text-decoration: none;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #faebd7;
+  display: flex;
+  justify-content: left;
+}
+
+.formField {
+  border-radius: 10px;
+  background-color: #fcf6ee;
+  margin: 10px 5px;
+  padding: 20px;
+}
+
+.floatInputGroup {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  justify-content: left;
+}
+.floatingLabel {
+  position: absolute;
+  padding: 10px 10px;
+  margin: 10px;
+  transition: 0.5s ease all;
+}
+.floatingInput:focus ~ .floatingLabel,
+.floatingInput:not(:placeholder-shown) ~ .floatingLabel {
+  margin-top: -2px;
+  font-size: 16px;
+}
+.floatingInput {
+  padding: 30px 20px 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  outline: none;
+}
+.floatingSelect {
+  padding: 30px 20px 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  outline: none;
+}
+.floatingLabel a {
+  text-decoration: underline;
+  margin: 0px;
+  padding: 0px;
+}
+.floatingInlineInputGroup {
+  margin: 0px 5px;
+  display: grid;
+  grid-template-columns: 1em auto;
+  border-radius: 5px;
+  gap: 0.5em;
+}
+.floatingInlineInput {
+  padding: 4px;
+}
+.floatingInlineLabel {
+  padding: 2px;
+}
+.floatingInlineLabel span a {
+  text-decoration: underline;
+}
+
+.button {
+  margin: 5px;
+  padding: 10px;  
+  border-radius: 5px;
+  border: none;
+  font-family: sans-serif;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button:hover {
+  color: #e8e6e3;
+  background-color: #0062cc;
+  border-color: #0056b3;
+}
+
+#submit {
+  padding: 15px 100px;
+}
+
+@media only screen and (min-width: 1280px) {
+  #content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  #content {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #content {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
