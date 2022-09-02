@@ -7,7 +7,7 @@ function createStack() {
         pop() {
             return items.pop();
         },
-        status() {
+        listItems() {
             console.log(items);
         }
     };
@@ -16,8 +16,8 @@ function createStack() {
 const stack = createStack();
 stack.push(10);
 stack.push(5);
-console.log(stack.status());
+console.log(stack.listItems());
 stack.pop();
-console.log(stack.status());
+console.log(stack.listItems());
 stack.items = [10, 100, 1000];
-console.log(stack.status());
+console.log(stack.listItems());
