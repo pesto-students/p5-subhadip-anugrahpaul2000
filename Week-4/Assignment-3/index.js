@@ -3,7 +3,7 @@ const fibbonaci = {
 
   [Symbol.iterator]() {
     let i = 1;
-    let prev = nextStep = 0;
+    let prev = (nextStep = 0);
 
     return {
       next: () => {
@@ -20,6 +20,6 @@ const fibbonaci = {
 
 fibbonaci.step = 10;
 
-for(let num of fibbonaci) {
+for (let num of fibbonaci) {
   console.log(num);
 }
