@@ -12,6 +12,8 @@ class MyPromise {
     this.handlers = [];
     this.resolve = this.resolve.bind(this);
     this.reject = this.reject.bind(this);
+
+
     // Invoke callback by passing the resolve and the reject function of our class
     try {
       callback(this.resolve, this.reject);
@@ -46,7 +48,7 @@ class MyPromise {
     return val instanceof MyPromise;
   }
 
-  resolve(value) {
+  resolve (value) {
     this.updateResult(value, STATE.FULFILLED);
   }
 
@@ -137,24 +139,25 @@ class MyPromise {
 
 function getNumber() {
   var number = Math.floor(Math.random() * 10000);
-  var delay = Math.floor(Math.random() * 100);
+  var delay = Math.floor(Math.random() * 10000);
   return {
     number: number,
     delay: delay
   };
 }
 
-let promise1 = new MyPromise((resolve, reject) => {
-  const { number, delay } = getNumber();
-  setTimeout(() => {
-    if (number % 5 === 0) {
-      reject(`Promise Rejected for: ${number} with a delay of: ${delay} seconds`);
-    }
-    resolve(`Promise Accepted for: ${number} with a delay of: ${delay} seconds`);
-  }, delay);
+let promise1 = new MyPromise((resolve, reject) =>
+{
+    const { number, delay } = getNumber();
+    setTimeout(() => {
+      if (number % 5 === 0) {
+        reject({number,delay});
+      }
+      resolve({number,delay});
+    }, delay);
 });
 
 promise1
-  .then((res) => console.log(res))
-  .catch((res) => console.log(res))
+  .then((res) => console.log(`Promise Rejected for: ${res.number} with a delay of: ${res.delay/1000} seconds`))
+  .catch((res) => console.log(`Promise Accepted for: ${res.number} with a delay of: ${res.delay/1000} seconds`))
   .finally(() => console.log(`Promise Instance Finished`));
