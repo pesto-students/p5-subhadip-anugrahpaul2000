@@ -10,10 +10,9 @@ function* generator() {
 async function getUser(userId) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve({
-        userId: userId,
-        username: (Math.random() + 1).toString(36).substring(7),
-      });
+      resolve(
+        (Math.random() + 1).toString(36).substring(7),
+      );
     }, 1000);
   });
 }
@@ -36,31 +35,14 @@ async function getServiceCost(services) {
 
 async function getDetails(uId) {
   const userDetails = {};
-
   try {
-
-    const res = await getUser(uId);
-    userDetails.userId = res.userId;
-    userDetails.username = res.username;
-
+    userDetails.userId = uId;
+    userDetails.username = await getUser(uId);
     userDetails.services = await getServices(["Email", "VPN", "CDN"]);
     userDetails.serviceCost =  await getServiceCost(userDetails.services);
   } catch (e){
     console.log(e);
   }
-
-  // await getServices(["Email", "VPN", "CDN"])
-  //   .then((res) => {
-  //     userDetails.services = res;
-  //   })
-  //   .catch();
-
-
-  // await getServiceCost(userDetails.services)
-  //   .then((res) => {
-  //      = res;
-  //   })
-  //   .catch();
 
   let response = `\nUser ID: ${userDetails.userId} \nUsername: '${userDetails.username}' \nServices: ${userDetails.services} \nService Cost: ${userDetails.serviceCost}`;
   console.log(response);
