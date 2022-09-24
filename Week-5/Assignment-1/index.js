@@ -35,25 +35,32 @@ async function getServiceCost(services) {
 }
 
 async function getDetails(uId) {
-  let userDetails = {};
+  const userDetails = {};
 
-  await getUser(uId)
-    .then((res) => {
-      userDetails = res;
-    })
-    .catch();
+  try {
 
-  await getServices(["Email", "VPN", "CDN"])
-    .then((res) => {
-      userDetails.services = res;
-    })
-    .catch();
+    const res = await getUser(uId);
+    userDetails.userId = res.userId;
+    userDetails.username = res.username;
 
-  await getServiceCost(userDetails.services)
-    .then((res) => {
-      userDetails.serviceCost = res;
-    })
-    .catch();
+    userDetails.services = await getServices(["Email", "VPN", "CDN"]);
+    userDetails.serviceCost =  await getServiceCost(userDetails.services);
+  } catch (e){
+    console.log(e);
+  }
+
+  // await getServices(["Email", "VPN", "CDN"])
+  //   .then((res) => {
+  //     userDetails.services = res;
+  //   })
+  //   .catch();
+
+
+  // await getServiceCost(userDetails.services)
+  //   .then((res) => {
+  //      = res;
+  //   })
+  //   .catch();
 
   let response = `\nUser ID: ${userDetails.userId} \nUsername: '${userDetails.username}' \nServices: ${userDetails.services} \nService Cost: ${userDetails.serviceCost}`;
   console.log(response);
@@ -61,9 +68,14 @@ async function getDetails(uId) {
 
 const data = generator();
 
-getDetails(data.next().value.userId);
-getDetails(data.next().value.userId);
-getDetails(data.next().value.userId);
-getDetails(data.next().value.userId);
-getDetails(data.next().value.userId);
-getDetails(data.next().value.userId);
+async function main() {
+
+  await getDetails(data.next().value.userId);
+  await getDetails(data.next().value.userId);
+  await getDetails(data.next().value.userId);
+  await getDetails(data.next().value.userId);
+  await getDetails(data.next().value.userId);
+  await getDetails(data.next().value.userId);
+}
+
+main();
