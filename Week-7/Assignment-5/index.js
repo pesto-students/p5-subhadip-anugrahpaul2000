@@ -16,9 +16,13 @@ const nextGreaterElement = (array) => {
     if (i === array.length - 1) {
       output.push(-1);
       pointer1 = pointer2;
-    } else if (j == array.length) {
-      pointer1 = i;
-      output.push(-1);
+    } else if (j === array.length) {
+      if (array[pointer2] === array[i]) {
+        output.push(-1);
+      } else if (array[i] < array[pointer2]) {
+        output.push(array[pointer2]);
+      }
+      pointer1 = i + 1;
     } else {
       output.push(array[pointer2]);
       pointer1 = pointer2;
