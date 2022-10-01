@@ -7,7 +7,7 @@ function* generator() {
   }
 }
 
-async function getUser(userId) {
+function getUser(userId) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(
@@ -17,7 +17,7 @@ async function getUser(userId) {
   });
 }
 
-async function getServices(service) {
+function getServices(service) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(service);
@@ -25,7 +25,7 @@ async function getServices(service) {
   });
 }
 
-async function getServiceCost(services) {
+function getServiceCost(services) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(services.length * 100);
