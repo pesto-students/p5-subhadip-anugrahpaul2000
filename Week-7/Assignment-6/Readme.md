@@ -1,10 +1,13 @@
-# Exercise 7.5:
-### Next Greater Element
+# Exercise 7.6:
+### Implement a Queue using 2 stack
 
 Implement a Queue using 2 stacks s1 and s2. A Query Q is of 2 Types (i) 1 x (a query of this type means pushing 'x' into the queue) (ii) 2 (a query of this type means to pop element from queue and print the poped element)
 
-> Time Complexity: O(1)
-    O(1) for push() and O(N) for pop() or O(N) for push() and O(1) for pop()
+> Time Complexity:  
+    O(1) for push() and O(N) for pop()  
+    or  
+    O(N) for push() and O(1) for pop()  
+
 > Expected Auxiliary Space: O(1) 
 
 > Constraints:  

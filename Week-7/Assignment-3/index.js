@@ -12,6 +12,7 @@ class SinglyLinkedList {
     this.current = null;
     this.previous = null;
     this.next = null;
+    this.temp = null;
     while (args.length) {
       this.add(args.shift());
     }
@@ -19,7 +20,7 @@ class SinglyLinkedList {
 
   /**
    * Adds Node to the Linked List
-   * @param {element} value 
+   * @param {element} value
    */
   add(value) {
     let newNode = new Node(value);
@@ -38,7 +39,7 @@ class SinglyLinkedList {
 
   /**
    * Searches and Deletes the Element in the Linked List
-   * @param {element} value 
+   * @param {element} value
    * @returns null
    */
   delete(value) {
@@ -82,37 +83,36 @@ class SinglyLinkedList {
   }
 
   /**
-   * Reverses the Linked List and Prints
-   * @returns null
+   * Detects Loop present in Linked List
+   * @param {int} position
+   * @returns bool
    */
-  reverse() {
+  detectLoop(position) {
     if (this.head === null) {
-      console.log(`Linked List is Empty. \nNothing to Reverse`);
+      console.log(`Linked List is Empty. \nNothing to Detect Loop`);
       return;
     }
 
+    let i = 0;
     this.current = this.head;
-    this.previous = null;
     while (this.current !== null) {
-      this.next = this.current.next;
-      this.current.next = this.previous;
-      this.previous = this.current;
-      this.current = this.next;
+      if (i === position) {
+        this.temp = this.current;
+      }
+      i++;
+      this.current = this.current.next;
     }
-    this.head = this.previous;
-    console.log(`Reverse Linked List`);
-    this.print();
-  }
 
+    if (this.temp !== this.head)
+    {
+        return true;
+    }
+    return false;
+  }
 }
 
-const sLL = new SinglyLinkedList(1,2,3,4);
-sLL.add(5);
-sLL.add(6);
-sLL.add(7);
-sLL.add(8);
-sLL.print();
-sLL.delete(1);
-sLL.delete(4);
-sLL.print();
-sLL.reverse();
+const sLL = new SinglyLinkedList(1, 3, 4);
+console.log(sLL.detectLoop(2));
+
+const sLL2 = new SinglyLinkedList(1, 8, 3, 4);
+console.log(sLL2.detectLoop(0));

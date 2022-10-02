@@ -19,7 +19,7 @@ class SinglyLinkedList {
 
   /**
    * Adds Node to the Linked List
-   * @param {element} value 
+   * @param {element} value
    */
   add(value) {
     let newNode = new Node(value);
@@ -38,7 +38,7 @@ class SinglyLinkedList {
 
   /**
    * Searches and Deletes the Element in the Linked List
-   * @param {element} value 
+   * @param {element} value
    * @returns null
    */
   delete(value) {
@@ -104,15 +104,36 @@ class SinglyLinkedList {
     this.print();
   }
 
+  /**
+   * Shifts the Linked List towards Left
+   * @param {int} shifts
+   * @returns null
+   */
+  leftShift(shifts) {
+    if (this.head === null) {
+      console.log(`Linked List is Empty. \nNothing to Shift`);
+      return;
+    }
+
+    while (shifts--) {
+      let temp = this.head;
+      this.current = this.head;
+      if (this.head.next !== null) {
+        this.head = this.head.next;
+      }
+      while (this.current.next !== null) {
+        this.current = this.current.next;
+      }
+      this.current.next = temp;
+      temp.next = null;
+    }
+  }
 }
 
-const sLL = new SinglyLinkedList(1,2,3,4);
-sLL.add(5);
-sLL.add(6);
-sLL.add(7);
-sLL.add(8);
+const sLL = new SinglyLinkedList(2, 4, 7, 8, 9);
+sLL.leftShift(3);
 sLL.print();
-sLL.delete(1);
-sLL.delete(4);
-sLL.print();
-sLL.reverse();
+console.log('');
+const sLL2 = new SinglyLinkedList(1, 2, 3, 4, 5, 6, 7, 8);
+sLL2.leftShift(4);
+sLL2.print();
