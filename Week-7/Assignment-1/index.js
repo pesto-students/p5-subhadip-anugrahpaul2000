@@ -11,7 +11,6 @@ class SinglyLinkedList {
     this.head = null;
     this.current = null;
     this.previous = null;
-    this.next = null;
     while (args.length) {
       this.add(args.shift());
     }
@@ -90,14 +89,15 @@ class SinglyLinkedList {
       console.log(`Linked List is Empty. \nNothing to Reverse`);
       return;
     }
+    let next = null;
 
     this.current = this.head;
     this.previous = null;
     while (this.current !== null) {
-      this.next = this.current.next;
+      next = this.current.next;
       this.current.next = this.previous;
       this.previous = this.current;
-      this.current = this.next;
+      this.current = next;
     }
     this.head = this.previous;
     console.log(`Reverse Linked List`);
