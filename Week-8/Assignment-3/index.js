@@ -55,68 +55,42 @@ class BinaryTree {
     return false;
   }
 
-  /**
-   * Preorder Traversal
-   */
-  preorder(node) {
-    if (node !== null) {
-      console.log(node.element);
-      this.preorder(node.left);
-      this.preorder(node.right);
-    }
-  }
+  levelOrder(root) {
+    let q = [root];
+    let ans = `[`;
+    while (q[0]) {
+      let qlen = q.length, row = [];
+      for (let i = 0; i < qlen; i++) {
+        let curr = q.shift();
 
-  /**
-   * In Order Traversal
-   */
-  inorder(node) {
-    if (node !== null) {
-      this.inorder(node.left);
-      console.log(node.element);
-      this.inorder(node.right);
-    }
-  }
+        /**
+         * Adding to local Array
+         */
+        if (curr.element === null) {
+          row.push("null");
+        } else {
+          row.push(curr.element);
+        }
 
-  /**
-   * Post Order Traversal
-   */
-  postorder(node) {
-    if (node !== null) {
-      this.postorder(node.left);
-      this.postorder(node.right);
-      console.log(node.element);
-    }
-  }
+        /**
+         * If Left Child is present
+         */
+        if (curr.left) {
+          q.push(curr.left);
+        }
 
-  display() {
-    console.log("Preorder");
-    this.preorder(this.root);
-
-    console.log("Inorder");
-    this.inorder(this.root);
-
-    console.log("Postorder");
-    this.postorder(this.root);
-  }
-
-  maxDepth(node) {
-    if (node == null) {
-      return 0;
-    }
-    else {
-      let leftDepth = this.maxDepth(node.left);
-      let rightDepth = this.maxDepth(node.right);
-
-      if (leftDepth > rightDepth) {
-        return leftDepth + 1;
-      } 
-      else {
-        return rightDepth + 1;
+        /**
+         * If Right Child is Present
+         */
+        if (curr.right) {
+          q.push(curr.right);
+        }
       }
+      ans += `[${row}], `;
     }
+    return ans + `]`;
   }
 }
 
 let bt = new BinaryTree(3, 9, 20, null, null, 15, 7);
-bt.display();
-console.log(`Max Height is: ${bt.maxDepth(bt.root)}`);
+console.log(`Level Order: ${bt.levelOrder(bt.root)}`);
