@@ -1,0 +1,23 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin-top: 40px;
+  width: 400px;
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+button:hover {
+  background-color: rgb(102, 55, 151);
+  color: white;
+}
