@@ -1,0 +1,32 @@
+.valid-input:focus {
+  outline: 1px solid green;
+}
+
+.error-input:focus {
+  outline: 1px solid red;
+}
+
+.valid-text {
+  color: green;
+  font-weight: bold;
+}
+
+.error-text {
+  color: red;
+  font-weight: bold;
+}
+
+.body-content-input input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 20px;
+  border: none;
+  background-color: rgb(234, 188, 170);
+  outline: none;
+}
+
+.body-content-input input:focus {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 20px;
+}

@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto Serif");
+
+.bodyContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.body-head {
+  font-family: "roboto-serif";
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.body-content {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.body-content-input {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.button-primary {
+  padding: 10px 15px;
+  margin: 10px 20px;
+  background-color: rgb(55, 55, 232);
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+
+.button-primary:hover {
+  background-color: rgb(74, 74, 179);
+  outline: none;
+}
+
+.body-content-list {
+  font-family: sans-serif;
+  text-align: center;
+}
