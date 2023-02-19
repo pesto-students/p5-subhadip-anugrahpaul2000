@@ -1,0 +1,29 @@
+.error-text {
+  color: red;
+  font-weight: bold;
+}
+
+.form-main {
+  padding: 10px 100px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-group input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 20px;
+  border: none;
+  background-color: lightgray;
+}
+
+.input-group input:focus {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 20px;
+  outline: none;
+}
